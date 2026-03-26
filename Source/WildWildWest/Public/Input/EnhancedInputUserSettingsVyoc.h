@@ -42,8 +42,9 @@ public:
 																// Me retorna un pointer(*) a una Texture2D, para ahorrar espacio.
 																// "GetTexTurexxx" es el nombre de la funcion
 																// const le dice que solo lo puedes leer y no cambiar
-																//
-
-		
+	
+	
+	
+	
 	
 };
