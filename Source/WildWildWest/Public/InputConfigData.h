@@ -31,8 +31,7 @@ UCLASS()
 class WILDWILDWEST_API UInputConfigData : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
-	
-	
+
 public:
 	
 	
