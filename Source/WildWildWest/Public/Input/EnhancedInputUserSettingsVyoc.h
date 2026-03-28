@@ -16,6 +16,7 @@ class WILDWILDWEST_API UEnhancedInputUserSettingsVyoc : public UEnhancedInputUse
 
 public:
 
+	//Variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings")  //Solo le dice que existe esta VARIABLE al sistema; EditAnywhere cambia tanto en parado como jugado
 	float MouseSensitivityX;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings")  
@@ -38,6 +39,7 @@ public:
 	
 
 	UFUNCTION(BlueprintPure, Category = "Input")  //Pure solo saca un valor, no esta conectada al flujo
+	
 	static UTexture2D* GetTextureFromInputActionMetadata(const UInputAction* InputAction); //static es que no necesitas en la funcion un target, el target ya lo tiene otro
 																// Me retorna un pointer(*) a una Texture2D, para ahorrar espacio.
 																// "GetTexTurexxx" es el nombre de la funcion
