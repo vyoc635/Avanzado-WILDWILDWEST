@@ -13,7 +13,23 @@ class WILDWILDWEST_API AAdvanceCharFirst : public ACharacter
 
 public:
 	// Sets default values for this character's properties
+	
 	AAdvanceCharFirst();
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera");
+	class UCameraComponent* Camera1P;
+	
+	virtual void OnMoveForward(float Value);
+	virtual void OnMoveRight(float Value);
+	virtual void OnMoveBack(float Value);	
+	virtual void OnMoveLeft(float Value);
+	virtual void OnLook(FVector2d Value);
+	virtual void OnJump();
+	virtual void OnStartInteract();	
+	virtual void OnStopInteract();
+	
+	
+	
 
 protected:
 	// Called when the game starts or when spawned

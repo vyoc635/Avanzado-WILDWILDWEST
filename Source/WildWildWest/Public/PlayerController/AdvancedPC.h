@@ -9,6 +9,10 @@
 /**
  * 
  */
+
+struct FInputActionValue;
+
+
 UCLASS()
 class WILDWILDWEST_API AAdvancedPC : public APlayerController
 {
@@ -18,9 +22,24 @@ protected:
 	
 	virtual void OnPossess(APawn* InputPawn) override;
 	
+	virtual void SetupInputComponent() override;
 	
 public:
 	
-	UPROPERTY(VisibleAnywhere)
+	virtual void BeginPlay() override;
+	
+	void OnMoveForward(const FInputActionValue& Value);
+	void OnMoveRight(const FInputActionValue& Value);
+	void OnMoveBack(const FInputActionValue& Value);
+	void OnMoveLeft(const FInputActionValue& Value);
+	//void OnLook(const FInputActionValue& Value);
+	//void OnJump();
+	//void OnStartInteract();
+	//void OnStopInteract();
+	
+	
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AdvancedPC")
 	class AAdvanceCharFirst* CharacterXP;
+
 };
