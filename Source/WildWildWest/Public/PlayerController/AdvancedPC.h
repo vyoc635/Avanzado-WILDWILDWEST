@@ -14,4 +14,13 @@ class WILDWILDWEST_API AAdvancedPC : public APlayerController
 {
 	GENERATED_BODY()
 	
+protected:
+	
+	virtual void OnPossess(APawn* InputPawn) override;
+	
+	
+public:
+	
+	UPROPERTY(VisibleAnywhere)
+	class AAdvanceCharFirst* CharacterXP;
 };
